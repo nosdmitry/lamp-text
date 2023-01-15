@@ -1,0 +1,15 @@
+$red: #bb1c1c;
+
+.test {
+  color: $red;
+}
+
+.main-field {
+  // border: 1px solid red;
+  max-width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  &__cell {
+    // border: 1px solid blue;
+  }
+}

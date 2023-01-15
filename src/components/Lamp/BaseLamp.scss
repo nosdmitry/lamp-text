@@ -1,0 +1,14 @@
+.lamp {
+  display: flex;
+  border: 1px solid rgb(171, 154, 154);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+
+  &_active {
+    background-color: red;
+  }
+}
