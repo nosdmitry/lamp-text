@@ -8,7 +8,7 @@ function MainFild () {
 
   const CELL_AMOUNT_HORIZONTAL = 60;
   const CELL_AMOUNT_VERTICAL = 5;
-  const SPACE_SIZE = 2;
+  const SPACE_SIZE = 1;
   const importedDictionary = lettersDictionary as IDictionary;
 
   const [activeLetters, setActiveLetters] = useState<ILetter[]>([]);
