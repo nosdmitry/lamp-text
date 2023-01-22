@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lamp-text/static/css/main.d93a6c77.css",
-    "main.js": "/lamp-text/static/js/main.bedd175c.js",
-    "static/js/787.0937623e.chunk.js": "/lamp-text/static/js/787.0937623e.chunk.js",
-    "index.html": "/lamp-text/index.html",
-    "main.d93a6c77.css.map": "/lamp-text/static/css/main.d93a6c77.css.map",
-    "main.bedd175c.js.map": "/lamp-text/static/js/main.bedd175c.js.map",
-    "787.0937623e.chunk.js.map": "/lamp-text/static/js/787.0937623e.chunk.js.map"
+    "main.css": "/static/css/main.d93a6c77.css",
+    "main.js": "/static/js/main.e1f447dc.js",
+    "static/js/787.0937623e.chunk.js": "/static/js/787.0937623e.chunk.js",
+    "index.html": "/index.html",
+    "main.d93a6c77.css.map": "/static/css/main.d93a6c77.css.map",
+    "main.e1f447dc.js.map": "/static/js/main.e1f447dc.js.map",
+    "787.0937623e.chunk.js.map": "/static/js/787.0937623e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d93a6c77.css",
-    "static/js/main.bedd175c.js"
+    "static/js/main.e1f447dc.js"
   ]
 }
