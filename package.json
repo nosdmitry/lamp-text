@@ -2,7 +2,7 @@
   "name": "lamp-text",
   "version": "0.1.0",
   "homepage": "https://nosdmitry.github.io/lamp-text",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@react-three/drei": "^9.53.0",
     "@react-three/fiber": "^8.10.0",

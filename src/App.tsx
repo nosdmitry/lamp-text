@@ -5,11 +5,11 @@ import MainFieldTwoD from './components/MainField/MainFieldTwoD';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/'>
       <div className="App">
         <Routes>
-          <Route path='/3d' element={<MainField />} />
           <Route path='/' element={<MainFieldTwoD />} />
+          <Route path='/3d' element={<MainField />} />
         </Routes>
       </div>
     </BrowserRouter>
