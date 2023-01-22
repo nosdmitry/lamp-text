@@ -15,7 +15,7 @@ function BaseLamp(props: { x: number, y: number, isActive: boolean, handleActive
 
   return (
     <div className={setLampClasses()} onClick={() => props.handleActive(x, y, isActive)}  >
-      {x}:{y}
+      {/* {x}:{y} */}
     </div>
   )
 }

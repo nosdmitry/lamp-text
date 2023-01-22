@@ -9,7 +9,19 @@ $red: #bb1c1c;
   max-width: fit-content;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  margin-top: 20px;
   &__cell {
     // border: 1px solid blue;
+  }
+}
+
+.two-d-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__link {
+    margin-top: 20px;
   }
 }
