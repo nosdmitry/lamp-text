@@ -7,20 +7,21 @@ import MainLamp from "./MainLamp";
 import lettersDictionary from '../../dictionary/letters.json';
 import MainCamera from "./MainCamera";
 import Background from "./Background";
+import './MainFiled.scss';
+
+const LAMP_AMOUNT_X = 12;
+const LAMP_AMOUNT_Y = 5
+const SPACE_SIZE = 2;
 
 const MainField = () => {
 
   const importedDictionary = lettersDictionary as IDictionary;
-  const LAMP_AMOUNT_X = 5;
-  const LAMP_AMOUNT_Y = 5
-  const SPACE_SIZE = 2;
 
   const [activeLetters, setActiveLetters] = useState<ILetter[]>([]);
   const [dictionary ] = useState<IDictionary>(importedDictionary);
   const [activeLamps, setActiveLamps] = useState<IActivePosition[]>([]);
-
-  useEffect(() => {
-  }, [])
+  const [lampXAmount] = useState<number>(LAMP_AMOUNT_X);
+  const [lampYAmount] = useState<number>(LAMP_AMOUNT_Y);
 
   useEffect(() => {
     const handleVisibleLetters = () => {
@@ -46,7 +47,6 @@ const MainField = () => {
 
     handleVisibleLetters();
   }, [activeLetters]);
-
 
   function incrementHorizontalPosition(letter: ILetter, currentPosition: number): IActivePosition[] {
     const movedLetter = letter.position.map(pos => {
@@ -100,44 +100,41 @@ const MainField = () => {
       addNewLetter(letter)
     });
   }
-  
-  // function handleOneLamp(x: number, y: number, isActive: boolean) {
 
-  //   if (isActive) {
-  //     setActiveLamps((activeLamps) => {
-  //       const filteredMaps = activeLamps.filter(lamp => {
-  //         console.log('lamp.x !== x && lamp.y !== y', lamp.x, lamp.y)
-  //         return lamp.x !== x && lamp.y !== y
-  //       });
-  //       return filteredMaps;
-  //     })
-  //     return;
-  //   }
-
-  //   setActiveLamps((activeLamps) => [...activeLamps, {x, y}])
-
-  // }
-
-  // function addLetter(): void {
-  //   setActiveLetters((activeLetters) => [...activeLetters, importedDictionary.a, ])
-  // }
+  function getLampPosition(x: number, y: number): { x: number, y: number} {
+    return {
+      x: x * 1.1  - ((lampXAmount / 2) * 1.1 - 0.5), 
+      y: y * -1.1 + (lampYAmount / 2) * 1.1 - 0.5
+    }
+  }
 
   return (
     <>
-      <button onClick={turnOffAll}>destroy all</button>
-      <input onChange={handleInput} />
+      <div className="controls">
+        <button onClick={turnOffAll}>destroy all</button>
+        <input placeholder="type somethig" onChange={handleInput} />
+      </div>
+
       <Canvas>
-        <MainCamera />
+        <MainCamera
+          cameraX={ -7 }
+          cameraZ={ 13 }
+        />
         <OrbitControls />
         <Light />
-        <Background />
+        <Background
+          width={ lampXAmount * 1.1 + 1}
+          height={ lampYAmount * 1.1 + 1 }
+          positionX={ 0 }
+          positionY={ 0 }
+        />
         { 
-          [...Array(LAMP_AMOUNT_Y)].map((item, y) => {
-            return [...Array(LAMP_AMOUNT_X)].map((element, x) => {
+          [...Array(lampYAmount)].map((_, y) => {
+            return [...Array(lampXAmount)].map((_, x) => {
               return (
                 <MainLamp
                   key={`${x}${y}`}
-                  postition={{x: x * 1.1, y: y * -1.1}}
+                  postition={getLampPosition(x, y)}
                   isActive={ckeckIfActive(x, y)} 
                 />
               )
