@@ -1,7 +1,7 @@
 {
   "name": "lamp-text",
   "version": "0.1.0",
-  "homepage": "https://nosdmitry.github.io/lamp-text",
+  "homepage": "https://nosdmitry.github.io/",
   "private": false,
   "dependencies": {
     "@react-three/drei": "^9.53.0",
