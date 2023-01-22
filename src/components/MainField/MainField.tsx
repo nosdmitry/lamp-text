@@ -1,5 +1,5 @@
 import './MainField.scss';
-import BaseLamp from '../Lamp/BaseLamp';
+import BaseLamp from './BaseLamp';
 import { useEffect, useState } from 'react';
 import { ILetter, ELetterType, IActivePosition, IDictionary } from './types';
 import lettersDictionary from '../../dictionary/letters.json';

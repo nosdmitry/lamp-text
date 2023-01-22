@@ -1,11 +1,11 @@
 import './App.scss';
-import LampField from './components/LampField/LampField';
+import MainField from './components/LampText/MainFiled';
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <LampField />
+        <MainField />
       </div>
     </div>
   );
