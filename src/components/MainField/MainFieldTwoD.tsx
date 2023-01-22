@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { ILetter, ELetterType, IActivePosition, IDictionary } from './types';
 import lettersDictionary from '../../dictionary/letters.json';
 
-function MainFild () {
+function MainFieldTwoD () {
 
   const CELL_AMOUNT_HORIZONTAL = 60;
   const CELL_AMOUNT_VERTICAL = 5;
@@ -116,9 +116,12 @@ function MainFild () {
 
   return (
     <>
-    <h1 className='test'>TEST</h1>
-    <button onClick={turnOffAll}>destroy all</button>
-    <input onChange={handleInput} />
+    <div className='two-d-controls'>
+      <h1 className='test'>Type some text</h1>
+      <button onClick={turnOffAll}>destroy all</button>
+      <input onChange={handleInput} />
+      <a className='two-d-controls__link' href='/3d'>go to 3d</a>
+    </div>
     
 
     <ul className='main-field' style={{gridTemplateColumns: `repeat(${CELL_AMOUNT_HORIZONTAL}, 1fr)`}} >
@@ -142,4 +145,4 @@ function MainFild () {
   )
 }
 
-export default MainFild;
+export default MainFieldTwoD;

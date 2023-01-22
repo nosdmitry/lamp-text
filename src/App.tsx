@@ -1,13 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import MainField from './components/LampText/MainFiled';
+import MainFieldTwoD from './components/MainField/MainFieldTwoD';
 
 function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <MainField />
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path='/3d' element={<MainField />} />
+          <Route path='/' element={<MainFieldTwoD />} />
+        </Routes>
       </div>
-    </div>
+    </BrowserRouter>
+    
   );
 }
 

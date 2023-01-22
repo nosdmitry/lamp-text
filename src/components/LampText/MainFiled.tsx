@@ -109,10 +109,12 @@ const MainField = () => {
   }
 
   return (
-    <>
+    <div className="container">
+
       <div className="controls">
         <button onClick={turnOffAll}>destroy all</button>
         <input placeholder="type somethig" onChange={handleInput} />
+        <a className="controls__link" href="/">back to 2d</a>
       </div>
 
       <Canvas>
@@ -142,7 +144,8 @@ const MainField = () => {
           })
         }
       </Canvas>
-    </>
+    </div>
+
   );
 };
 
