@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lamp-text/static/css/main.d93a6c77.css",
+    "main.js": "/lamp-text/static/js/main.c36a5bb0.js",
+    "static/js/787.0937623e.chunk.js": "/lamp-text/static/js/787.0937623e.chunk.js",
+    "index.html": "/lamp-text/index.html",
+    "main.d93a6c77.css.map": "/lamp-text/static/css/main.d93a6c77.css.map",
+    "main.c36a5bb0.js.map": "/lamp-text/static/js/main.c36a5bb0.js.map",
+    "787.0937623e.chunk.js.map": "/lamp-text/static/js/787.0937623e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d93a6c77.css",
+    "static/js/main.c36a5bb0.js"
+  ]
+}
